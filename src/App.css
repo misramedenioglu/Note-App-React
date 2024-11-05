@@ -1,0 +1,152 @@
+body {
+  background-color: #121212; /* Koyu arka plan rengi */
+  color: #e0e0e0; /* Açık gri yazı rengi */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1e1e1e; /* Koyu gri kutu arka planı */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+}
+
+h1 {
+  text-align: center;
+  color: #ff4081; /* Pembe başlık rengi */
+  margin-bottom: 20px; /* Alt boşluk */
+}
+
+.search {
+  display: flex;
+  justify-content: center; /* Ortala */
+  margin: 10px 0; /* Üst ve alt boşluk */
+}
+
+.search input {
+  width: 100%; /* Tam genişlik */
+  max-width: 500px; /* Maksimum genişlik ayarla */
+  padding: 15px; /* Daha fazla iç boşluk */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #333; /* Koyu gri arka plan */
+  color: #e0e0e0; /* Yazı rengi */
+  transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+.search input:focus {
+  background-color: #444; /* Seçili durum rengi */
+  outline: none; /* Kenar çerçevesini kaldır */
+}
+
+.note-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column; /* Dikey hizala */
+  align-items: center; /* Ortala */
+}
+
+textarea {
+  width: 100%;
+  height: 100px; /* Yüksekliği artırdım */
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333; /* Koyu gri arka plan */
+  color: #e0e0e0; /* Yazı rengi */
+  font-size: 16px;
+  transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+textarea:focus {
+  background-color: #444; /* Seçili durum rengi */
+  outline: none; /* Kenar çerçevesini kaldır */
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center; /* Ortala */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.note-colors {
+  display: flex;
+  gap: 20px; /* Renk kutucukları arasında boşluk bırak */
+}
+
+.note-colors div {
+  width: 40px; /* Kutucuk genişliği */
+  height: 40px; /* Kutucuk yüksekliği */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s; /* Animasyon efekti */
+}
+
+.note-colors div:hover {
+  transform: scale(1.1); /* Hover durumunda büyütme efekti */
+}
+
+.note-colors div.selected {
+  border: 3px solid #fff; /* Seçilen rengin etrafında beyaz çerçeve */
+}
+
+#add-btn {
+  padding: 15px 20px; /* Daha fazla iç boşluk */
+  background-color: #ff4081; /* Pembe arka plan rengi */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Geçiş efekti */
+  margin-left: 20px; /* Renk kutucukları ile buton arasında boşluk */
+}
+
+#add-btn:hover {
+  background-color: #e91e63; /* Hover durumunda daha koyu pembe */
+}
+
+.notes {
+  margin-top: 20px;
+}
+
+.notes-container {
+  display: flex;
+  flex-wrap: wrap; /* Taşmayı önle */
+  gap: 10px; /* Notlar arasında boşluk */
+}
+
+.note {
+  flex: 1 1 calc(30% - 10px); /* Not kutularının genişliği */
+  margin: 5px;
+  padding: 15px;
+  border-radius: 8px;
+  position: relative; /* Silme butonu için konumlandırma */
+  color: #000; /* Yazı rengi */
+  font-weight: bold; /* Kalın yazı */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animasyon efekti */
+}
+
+.note:hover {
+  transform: translateY(-3px); /* Hover durumunda yukarı kaydırma */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ff4081; /* Silme butonu rengi */
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s; /* Geçiş efekti */
+}
+
+.delete-btn:hover {
+  color: #e91e63; /* Hover durumunda daha koyu pembe */
+}
